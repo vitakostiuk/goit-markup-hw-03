@@ -12,6 +12,18 @@ body {
   letter-spacing: 0.03em;
 }
 
+/* временно
+.page-header {
+  background-color: teal;
+} */
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
 /* Логотип */
 .logo {
   color: var(--accent-color);
@@ -68,13 +80,18 @@ body {
   background-color: #2f303a;
 }
 
+.hero {
+  text-align: center;
+}
+
 .hero-title {
   color: #ffffff;
+
+  margin-bottom: 30px;
 
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -88,10 +105,15 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
 
+  border-radius: 4px;
+
   cursor: pointer;
 }
 
 .hero-btn {
+  padding: 10px 32px;
+  min-width: 200px;
+
   background-color: #188ce8;
   color: #ffffff;
 }
@@ -102,12 +124,22 @@ body {
 }
 
 /* Секции */
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.section.no-padding-top {
+  padding-top: 0;
+}
+
 .section-title.hiden {
   display: none;
 }
 
 .section-title {
   color: var(--title-text-color);
+  margin-bottom: 50px;
 
   font-size: 36px;
   line-height: 1.2;
@@ -118,6 +150,7 @@ body {
 /* Преимущества */
 .feature-list .title {
   color: var(--title-text-color);
+  margin-bottom: 10px;
 
   font-size: 14px;
   line-height: 1.14;
@@ -134,8 +167,13 @@ body {
   background-color: #f5f4fa;
 }
 
+.photo {
+  margin-bottom: 30px;
+}
+
 .team .member {
   color: var(--title-text-color);
+  margin-bottom: 10px;
 
   font-weight: 500;
   font-size: 16px;
@@ -144,6 +182,8 @@ body {
 }
 
 .team .position {
+  margin-bottom: 30px;
+
   font-size: 16px;
   line-height: 1.2;
   text-align: center;
@@ -167,7 +207,13 @@ body {
 
 /* Страница портфолио */
 /* Фильтр кнопки */
+.filter-list {
+  margin-bottom: 34px;
+}
 .filter-btn {
+  padding: 6px 22px;
+  min-width: 73px;
+
   background-color: #f5f4fa;
   color: var(--title-text-color);
 }
@@ -179,8 +225,12 @@ body {
 }
 
 /* Проекты */
+.projects-photo {
+  margin-bottom: 20px;
+}
 .projects .title {
   color: var(--title-text-color);
+  margin-bottom: 4px;
 
   font-size: 18px;
   line-height: 2;
@@ -189,6 +239,7 @@ body {
 
 .projects .filter {
   color: var(--primary-text-color);
+  margin-bottom: 20px;
 
   font-size: 16px;
   line-height: 1.9;
