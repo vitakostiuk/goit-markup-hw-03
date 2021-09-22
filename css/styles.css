@@ -7,16 +7,11 @@
 body {
   background-color: #ffffff;
   color: var(--primary-text-color);
-
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
 }
 
-/* временно
-.page-header {
-  background-color: teal;
-} */
-
+/* Шапка сайта */
 .container {
   width: 1200px;
   padding-left: 15px;
@@ -24,27 +19,45 @@ body {
   margin: 0 auto;
 }
 
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
 /* Логотип */
 .logo {
   color: var(--accent-color);
-
   font-family: Raleway, sans-serif;
   font-size: 26px;
   line-height: 1.2;
 }
 
-.logo-header {
+.logo-header-black {
   color: #000000;
 }
 
-.logo-footer {
-  color: #ffffff;
+/* Главная навигация */
+.main-nav {
+  display: flex;
+  margin-left: 93px;
 }
 
-/* Главная навигация */
-.main-nav .link {
-  color: var(--title-text-color);
+.main-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
 
+.main-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--title-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -52,9 +65,20 @@ body {
 }
 
 /* Контакты хедер*/
-.contacts-nav .link {
-  color: var(--primary-text-color);
+.contacts-nav {
+  display: flex;
+}
 
+.contacts-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contacts-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -64,9 +88,7 @@ body {
 .main-nav .link:hover,
 .main-nav .link:focus,
 .contacts-nav .link:hover,
-.contacts-nav .link:focus,
-.contacts-footer .link:hover,
-.contacts-footer .link:focus {
+.contacts-nav .link:focus {
   color: var(--accent-color);
 }
 
@@ -75,8 +97,7 @@ body {
 }
 
 /* Блок герой, футер*/
-.hero,
-.footer {
+.hero {
   background-color: #2f303a;
 }
 
@@ -85,10 +106,9 @@ body {
 }
 
 .hero-title {
-  color: #ffffff;
-
   margin-bottom: 30px;
 
+  color: #ffffff;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -98,15 +118,14 @@ body {
 
 /* Кнопка */
 .btn {
+  border-radius: 4px;
+
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
   text-align: center;
   letter-spacing: 0.06em;
-
-  border-radius: 4px;
-
   cursor: pointer;
 }
 
@@ -138,9 +157,9 @@ body {
 }
 
 .section-title {
-  color: var(--title-text-color);
   margin-bottom: 50px;
 
+  color: var(--title-text-color);
   font-size: 36px;
   line-height: 1.2;
   text-align: center;
@@ -148,10 +167,23 @@ body {
 }
 
 /* Преимущества */
+.feature-list {
+  display: flex;
+}
+
+.feature-list .item {
+  width: 270px;
+  margin-right: 30px;
+}
+
+.feature-list .item:nth-child(4n) {
+  margin-right: 0;
+}
+
 .feature-list .title {
-  color: var(--title-text-color);
   margin-bottom: 10px;
 
+  color: var(--title-text-color);
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
@@ -162,7 +194,37 @@ body {
   line-height: 1.71;
 }
 
+/* Чем мы занимаемся */
+.gallery-list {
+  display: flex;
+}
+
+.gallery-list .item {
+  display: flex;
+  margin-right: 30px;
+}
+
+.gallery .item:nth-child(3n) {
+  margin-right: 0;
+}
+
 /* Наша команда */
+.team-list {
+  display: flex;
+}
+
+.team-list .item {
+  width: 270px;
+  margin-right: 30px;
+  border-radius: 0px 0px 4px 4px;
+
+  background-color: #ffffff;
+}
+
+.team-list .item:nth-child(4n) {
+  margin-right: 0;
+}
+
 .team {
   background-color: #f5f4fa;
 }
@@ -190,10 +252,34 @@ body {
 }
 
 /* Футер */
+.footer {
+  background-color: #2f303a;
+}
+
+.logo.logo-footer {
+  display: block;
+  padding-top: 60px;
+  padding-left: 215px;
+  margin-bottom: 20px;
+}
+
+.logo-footer-white {
+  color: #ffffff;
+}
+
+.contacts-footer {
+  padding-bottom: 60px;
+  padding-left: 215px;
+}
+
+.contacts-footer .link:hover,
+.contacts-footer .link:focus {
+  color: var(--accent-color);
+}
+
 .contacts-footer .link,
 .contacts-footer .address {
   color: rgba(255, 255, 255, 0.6);
-
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-size: 14px;
