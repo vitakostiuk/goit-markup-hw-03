@@ -39,82 +39,138 @@
   <main>
     <!-- Портфолио -->
     <section class="section">
-      <!-- Скрыть этот заголовок с помощью css -->
-      <h1 class="section-title hiden">Портфолио</h1>
-      <!-- Фильтр кнопки -->
-      <div class="filter-list">
-        <button class="filter-btn btn" type="button">Все</button>
-        <button class="filter-btn btn" type="button">Веб-сайты</button>
-        <button class="filter-btn btn" type="button">Приложения</button>
-        <button class="filter-btn btn" type="button">Дизайн</button>
-        <button class="filter-btn btn" type="button">Маркетинг</button>
+      <div class="container">
+        <!-- Скрыть этот заголовок с помощью css -->
+        <h1 class="section-title hiden">Портфолио</h1>
+        <!-- Фильтр кнопки -->
+        <div class="filter-list">
+          <button class="filter-btn btn" type="button">Все</button>
+          <button class="filter-btn btn" type="button">Веб-сайты</button>
+          <button class="filter-btn btn" type="button">Приложения</button>
+          <button class="filter-btn btn" type="button">Дизайн</button>
+          <button class="filter-btn btn" type="button">Маркетинг</button>
+        </div>
+        <!-- Проекты -->
+        <ul class="projects">
+          <li class="item">
+            <article class="card">
+              <a href="">
+                <div class="card-thumb">
+                  <img class="projects-photo" src="./images/img1.jpg" alt="Веб-сайт Технокряк" width="370" height="294">
+                </div>
+                <div class="card-content">
+                  <h2 class="card-title">Технокряк</h2>
+                  <p class="card-filter">Веб-сайт</p>
+                </div>
+              </a>
+            </article>
+          </li>
+          <li class="item">
+            <article class="card">
+              <a href="">
+                <div class="card-thumb">
+                  <img class="projects-photo" src="./images/img2.jpg" alt="Дизайн постера" width="370" height="294">
+                </div>
+                <div class="card-content">
+              <h2 class="card-title">Постер <span lang="en">New Orlean vs Golden Star</span></h2>
+              <p class="card-filter">Дизайн</p>
+                </div>
+              </a>
+            </article>
+          </li>
+          <li class="item">
+            <article class="card">
+              <a href="">
+                <div class="card-thumb">
+                  <img class="projects-photo" src="./images/img3.jpg" alt="Приложение для ресторана" width="370" height="294">
+                </div>
+                <div class="card-content">
+                  <h2 class="card-title">Ресторан <span lang="en">Seafood</span></h2>
+                  <p class="card-filter">Приложение</p>
+                </div>
+              </a>
+            </article>
+          </li>
+          <li class="item">
+            <article class="card">
+              <a href="">
+                <div class="card-thumb">
+                  <img class="projects-photo" src="./images/img4.jpg" alt="Продвижение проекта" width="370" height="294">
+                </div>
+                <div class="card-content">
+                  <h2 class="card-title">Проект <span lang="en">Prime</span></h2>
+                  <p class="card-filter">Маркетинг</p>
+                </div>
+              </a>
+            </article>
+          </li>
+          <li class="item">
+            <article class="card">
+              <a href="">
+                <div class="card-thumb">
+                  <img class="projects-photo" src="./images/img5.jpg" alt="Разработка приложения" width="370" height="294">
+                </div>
+                <div class="card-content">
+                  <h2 class="card-title">Проект<span lang="en">Boxes</span></h2>
+                  <p class="card-filter">Приложение</p>
+                </div>
+              </a>
+            </article>
+          </li>
+          <li class="item">
+            <article class="card">
+              <a href="">
+                <div class="card-thumb">
+                  <img class="projects-photo" src="./images/img6.jpg" alt="Разработка веб-сайта" width="370" height="294">
+                </div>
+                <div class="card-content">
+                  <h2 class="card-title" lang="en">Inspiration has no Borders</h2>
+                  <p class="card-filter">Веб-сайт</p>
+                </div>
+              </a>
+            </article>
+          </li>
+          <li class="item">
+            <article class="card">
+              <a href="">
+                <div class="card-thumb">
+                  <img class="projects-photo" src="./images/img7.jpg" alt="Дизайн журнала" width="370" height="294">
+                </div>
+                <div class="card-content">
+                  <h2 class="card-title">Издание<span lang="en">Limited Edition</span></h2>
+                  <p class="card-filter">Дизайн</p>
+                </div>
+              </a>
+            </article>
+          </li>
+          <li class="item">
+            <article class="card">
+              <a href="">
+                <div class="card-thumb">
+                  <img class="projects-photo" src="./images/img8.jpg" alt="Продвижение проекта" width="370" height="294">
+                </div>
+                <div class="card-content">
+                  <h2 class="card-title">Проект <span lang="en">LAB</span></h2>
+                  <p class="card-filter">Маркетинг</p>
+                </div>
+              </a>
+            </article>
+          </li>
+          <li class="item">
+            <article class="card">
+              <a href="">
+                <div class="card-thumb">
+                  <img class="projects-photo" src="./images/img9.jpg" alt="Разработка приложения" width="370" height="294">
+                </div>
+                <div class="card-content">
+                  <h2 class="card-title" lang="en">Growing Business</h2>
+                  <p class="card-filter">Приложение</p>
+                </div>
+              </a>
+            </article>
+          </li>
+        </ul>
       </div>
-      <!-- Проекты -->
-      <ul class="projects">
-        <li>
-          <a href="">
-            <img class="projects-photo" src="./images/img1.jpg" alt="Веб-сайт Технокряк" width="370" height="294">
-            <h2 class="title">Технокряк</h2>
-            <p class="filter">Веб-сайт</p>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img class="projects-photo" src="./images/img2.jpg" alt="Дизайн постера" width="370" height="294">
-            <h2 class="title">Постер <span lang="en">New Orlean vs Golden Star</span></h2>
-            <p class="filter">Дизайн</p>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img class="projects-photo" src="./images/img3.jpg" alt="Приложение для ресторана" width="370" height="294">
-            <h2 class="title">Ресторан <span lang="en">Seafood</span></h2>
-            <p class="filter">Приложение</p>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img class="projects-photo" src="./images/img4.jpg" alt="Продвижение проекта" width="370" height="294">
-            <h2 class="title">Проект <span lang="en"></span>Prime</h2>
-            <p class="filter">Маркетинг</p>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img class="projects-photo" src="./images/img5.jpg" alt="Разработка приложения" width="370" height="294">
-            <h2 class="title">Проект <span lang="en">Boxes</span></h2>
-            <p class="filter">Приложение</p>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img class="projects-photo" src="./images/img6.jpg" alt="Разработка веб-сайта" width="370" height="294">
-            <h2 class="title" lang="en">Inspiration has no Borders</h2>
-            <p class="filter">Веб-сайт</p>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img class="projects-photo" src="./images/img7.jpg" alt="Дизайн журнала" width="370" height="294">
-            <h2 class="title">Издание<span lang="en">Limited Edition</span></h2>
-            <p class="filter">Дизайн</p>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img class="projects-photo" src="./images/img8.jpg" alt="Продвижение проекта" width="370" height="294">
-            <h2 class="title">Проект <span lang="en">LAB</span></h2>
-            <p class="filter">Маркетинг</p>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img class="projects-photo" src="./images/img9.jpg" alt="Разработка приложения">
-            <h2 class="title" lang="en">Growing Business</h2>
-            <p class="filter">Приложение</p>
-          </a>
-        </li>
-      </ul>
     </section>
   </main>
   <!-- Футер -->

@@ -2,6 +2,10 @@
   --primary-text-color: #757575;
   --title-text-color: #212121;
   --accent-color: #2196f3;
+  --card-set-gap: 30px;
+  --card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  --card-border: 1px solid #eeeeee;
 }
 
 body {
@@ -11,7 +15,6 @@ body {
   letter-spacing: 0.03em;
 }
 
-/* Шапка сайта */
 .container {
   width: 1200px;
   padding-left: 15px;
@@ -19,10 +22,15 @@ body {
   margin: 0 auto;
 }
 
+/* Шапка сайта */
+.page-header {
+  border-bottom: 1px solid #ececec;
+}
+
 .header-container {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .site-nav {
@@ -107,6 +115,9 @@ body {
 
 .hero-title {
   margin-bottom: 30px;
+  max-width: 696px;
+  margin-left: auto;
+  margin-right: auto;
 
   color: #ffffff;
   font-weight: 900;
@@ -169,15 +180,14 @@ body {
 /* Преимущества */
 .feature-list {
   display: flex;
+  margin-top: calc(-1 * var(--card-set-gap));
+  margin-left: calc(-1 * var(--card-set-gap));
 }
 
 .feature-list .item {
-  width: 270px;
-  margin-right: 30px;
-}
-
-.feature-list .item:nth-child(4n) {
-  margin-right: 0;
+  margin-top: var(--card-set-gap);
+  margin-left: var(--card-set-gap);
+  flex-basis: calc(100% / 4 - var(--card-set-gap));
 }
 
 .feature-list .title {
@@ -197,58 +207,54 @@ body {
 /* Чем мы занимаемся */
 .gallery-list {
   display: flex;
+  margin-top: calc(-1 * var(--card-set-gap));
+  margin-left: calc(-1 * var(--card-set-gap));
 }
 
 .gallery-list .item {
   display: flex;
-  margin-right: 30px;
-}
-
-.gallery .item:nth-child(3n) {
-  margin-right: 0;
+  margin-top: var(--card-set-gap);
+  margin-left: var(--card-set-gap);
 }
 
 /* Наша команда */
 .team-list {
   display: flex;
+  margin-top: calc(-1 * var(--card-set-gap));
+  margin-left: calc(-1 * var(--card-set-gap));
 }
 
 .team-list .item {
-  width: 270px;
-  margin-right: 30px;
+  margin-top: var(--card-set-gap);
+  margin-left: var(--card-set-gap);
+  flex-basis: calc(100% / 4 - var(--card-set-gap));
   border-radius: 0px 0px 4px 4px;
 
   background-color: #ffffff;
-}
-
-.team-list .item:nth-child(4n) {
-  margin-right: 0;
+  box-shadow: var(--card-shadow);
 }
 
 .team {
   background-color: #f5f4fa;
 }
 
-.photo {
-  margin-bottom: 30px;
+.team-employee {
+  padding: 30px 0;
+  text-align: center;
 }
 
 .team .member {
-  color: var(--title-text-color);
   margin-bottom: 10px;
 
+  color: var(--title-text-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
-  text-align: center;
 }
 
 .team .position {
-  margin-bottom: 30px;
-
   font-size: 16px;
   line-height: 1.2;
-  text-align: center;
 }
 
 /* Футер */
@@ -259,7 +265,6 @@ body {
 .logo.logo-footer {
   display: block;
   padding-top: 60px;
-  padding-left: 215px;
   margin-bottom: 20px;
 }
 
@@ -269,7 +274,6 @@ body {
 
 .contacts-footer {
   padding-bottom: 60px;
-  padding-left: 215px;
 }
 
 .contacts-footer .link:hover,
@@ -279,6 +283,8 @@ body {
 
 .contacts-footer .link,
 .contacts-footer .address {
+  display: block;
+
   color: rgba(255, 255, 255, 0.6);
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -294,14 +300,21 @@ body {
 /* Страница портфолио */
 /* Фильтр кнопки */
 .filter-list {
-  margin-bottom: 34px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
 }
+
 .filter-btn {
   padding: 6px 22px;
   min-width: 73px;
 
   background-color: #f5f4fa;
   color: var(--title-text-color);
+}
+
+.filter-btn:not(:last-child) {
+  margin-right: 8px;
 }
 
 .filter-btn:hover,
@@ -311,22 +324,39 @@ body {
 }
 
 /* Проекты */
-.projects-photo {
-  margin-bottom: 20px;
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--card-set-gap));
+  margin-left: calc(-1 * var(--card-set-gap));
 }
-.projects .title {
-  color: var(--title-text-color);
+
+.projects .item {
+  margin-top: var(--card-set-gap);
+  margin-left: var(--card-set-gap);
+  flex-basis: calc(100% / 3 - var(--card-set-gap));
+}
+
+.card {
+  border: var(--card-border);
+  background-color: #ffffff;
+}
+
+.card-content {
+  display: block;
+  padding: 20px 24px;
+}
+.projects .card-title {
   margin-bottom: 4px;
 
+  color: var(--title-text-color);
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
 
-.projects .filter {
+.projects .card-filter {
   color: var(--primary-text-color);
-  margin-bottom: 20px;
-
   font-size: 16px;
   line-height: 1.9;
 }
